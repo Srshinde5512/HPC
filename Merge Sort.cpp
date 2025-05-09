@@ -87,7 +87,7 @@ int main() {
     double start_seq = omp_get_wtime();
     sequentialMergeSort(arr2, 0, n - 1);
     double end_seq = omp_get_wtime();
-
+    cout << "Number of threads available: " << omp_get_max_threads() << endl;
     cout << "\nTime taken by Parallel Merge Sort: " << (end_parallel - start_parallel) << " seconds";
     cout << "\nFirst 10 elements after Parallel Merge Sort:\n";
     printFirst10(arr1);
