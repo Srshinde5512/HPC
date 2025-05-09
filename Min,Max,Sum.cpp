@@ -54,7 +54,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
-
+    cout << "Number of threads available: " << omp_get_max_threads() << endl;
     min_reduction(arr, n);
     max_reduction(arr, n);
     sum_reduction(arr, n);
