@@ -89,7 +89,7 @@ int main() {
         graph[u].push_back(v);
         graph[v].push_back(u); // Undirected graph
     }
-
+    cout << "Number of threads available: " << omp_get_max_threads() << endl;
     // Initialize visited array
     #pragma omp parallel for
     for (int i = 0; i < n; i++) {
