@@ -80,6 +80,8 @@ int main() {
     double end_sequential = omp_get_wtime();
     double sequential_time = end_sequential - start_sequential;
 
+    cout << "Number of threads available: " << omp_get_max_threads() << endl;
+
     cout << "\nTime taken by Parallel Bubble Sort: " << parallel_time << " seconds";
     cout << "\nFirst 20 elements after Parallel Sort: ";
     printArray(a, n);
